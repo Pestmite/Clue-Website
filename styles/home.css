@@ -1,0 +1,24 @@
+.hero {
+    height: 800px;
+    background-color: rgb(24, 24, 24);
+}
+
+.hero button {
+    background-color: rgb(181, 35, 181);
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgb(206, 112, 206);
+    cursor: pointer;
+    transition: padding 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+}
+
+.hero button:hover {
+    padding: 16px 32px;
+    box-shadow: 0 0 20px rgb(206, 112, 206);
+}
