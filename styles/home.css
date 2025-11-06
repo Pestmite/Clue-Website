@@ -41,3 +41,15 @@ section {
     padding: 16px 32px;
     box-shadow: 0 0 20px rgb(206, 112, 206);
 }
+
+.inner-school {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maps-figure {
+    border-radius: 20px;
+    width: 40vw;
+    height: 520px;
+    border: none;
+}
