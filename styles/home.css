@@ -1,19 +1,18 @@
 section {
     height: 600px;
     padding: 20px;
-    background-color: rgb(40, 40, 40);
+    background-color: rgba(40, 40, 40, 0);
     color: rgb(245, 247, 248);
 }
 
 .hero {
     height: 110vh;
     height: 110dvh;
-    background-color: rgb(24, 24, 24);
 }
 
 .hero h1 {
     position: absolute;
-    top: 160px;
+    top: 120px;
     text-align: center;
     left: 50%;
     font-size: 56px;

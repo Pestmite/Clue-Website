@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWA Clue</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/general.css">
 </head>
@@ -75,7 +85,10 @@
      <section id="answer">
         <h2>Whodunnit?</h2>
     </section>
+
+    <canvas id="bg"></canvas>
     
-    <script src="scripts/general.js"></script>
+    <script src="./scripts/general.js"></script>
+    <script type="module" src="./scripts/three.js"></script>
 </body>
 </html>
