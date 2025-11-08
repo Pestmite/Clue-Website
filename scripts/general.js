@@ -16,7 +16,7 @@ subheaderLink.forEach(navLink => {
 });
 
 /* Header disappearing */
-let startY = 0;
+/* let startY = 0;
 let HIDEMIN = 80;
 
 window.addEventListener('scroll', () => {
@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
   }
 
   startY = currentY;
-});
+}); */
 
 /* Mobile Menu */
 menu.addEventListener('click', () => {

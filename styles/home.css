@@ -1,9 +1,15 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
 section {
     height: 600px;
-    padding: 20px;
+    padding: 20px 32px 64px 32px;
     background-color: rgba(40, 40, 40, 0);
     color: rgb(245, 247, 248);
     scroll-margin-top: 50px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .hero {
