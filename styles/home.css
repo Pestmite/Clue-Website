@@ -3,6 +3,7 @@ section {
     padding: 20px;
     background-color: rgba(40, 40, 40, 0);
     color: rgb(245, 247, 248);
+    scroll-margin-top: 50px;
 }
 
 .hero {
