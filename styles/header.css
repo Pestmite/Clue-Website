@@ -143,3 +143,10 @@ nav a, .off-screen-menu a {
 		display: block;
 	}
 }
+
+.logo{
+	transition: height .15s;
+}
+.logo:hover{
+	height:100px;
+}

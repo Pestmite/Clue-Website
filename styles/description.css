@@ -1,0 +1,17 @@
+.p{
+    font-family: Arial;
+}
+
+.game-pieces{
+    color: white;
+    font-size: 14px;
+}
+.game-piece-title{
+    font-size: 16px;
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+.turbine-img{
+    width:400px;
+}
