@@ -2,7 +2,7 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-section {
+main > section {
     height: 600px;
     padding: 20px 32px 64px 32px;
     background-color: rgba(40, 40, 40, 0);

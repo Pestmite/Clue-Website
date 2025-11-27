@@ -1,5 +1,7 @@
 @import url("/styles/header.css");
 @import url("/styles/three.css");
+@import url("/styles/description.css");
+@import url("/styles/roster.css");
 
 body {
   margin: 0;

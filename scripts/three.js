@@ -1,5 +1,9 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const STARTz = 50;
+const STARCOUNT = 200;
 
 const scene = new THREE.Scene();
 
@@ -11,15 +15,25 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(60);
+camera.position.setZ(STARTz);
 
 renderer.render(scene, camera);
 
-const geometry = new THREE.OctahedronGeometry(10, 2);
-const material = new THREE.MeshStandardMaterial({ color: 0xb523b5, wireframe: true });
-const octahedron = new THREE.Mesh(geometry, material);
+let RWAModel;
 
-scene.add(octahedron);
+const loader = new GLTFLoader();
+loader.load('/models/rwa.glb', gltf => {
+  RWAModel = gltf.scene;
+
+  RWAModel.scale.set(0.3, 0.3, 0.3);
+  RWAModel.position.set(0, 0, 0);
+
+  scene.add(RWAModel);
+
+  animate();
+
+  Array(500).fill().forEach(addStar);
+});
 
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(20, 20, 20);
@@ -36,9 +50,9 @@ const gridHelper = new THREE.GridHelper(200, 50)
 function animate() {
   requestAnimationFrame(animate);
 
-  octahedron.rotation.x += 0.002;
-  octahedron.rotation.y += 0.005;
-  octahedron.rotation.z += 0.007;
+  // RWAModel.rotation.x += 0.002;
+  RWAModel.rotation.y += 0.005;
+  // RWAModel.rotation.z += 0.007;
 
   // controls.update();
 
@@ -56,7 +70,7 @@ function addStar() {
 
   const star = new THREE.Mesh(geometry, material);
 
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(200));
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(STARCOUNT));
   star.position.set(x, y, z);
   scene.add(star);
 }
@@ -65,10 +79,10 @@ function addStar() {
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  camera.position.z = t * 0.01 + 60;
+  camera.position.z = t * 0.01 + STARTz;
 
-  octahedron.position.x = t * -0.0015;
-  octahedron.position.z = t * -0.0015;
+  RWAModel.position.x = t * -0.0015;
+  RWAModel.position.z = t * -0.0015;
 }
 
 document.body.onscroll = moveCamera;
@@ -80,9 +94,4 @@ function resizeCanvas() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-
 window.addEventListener('resize', resizeCanvas);
-
-animate();
-
-Array(500).fill().forEach(addStar)

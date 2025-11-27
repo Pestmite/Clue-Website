@@ -23,14 +23,14 @@
     <header>
         <div class="menu-header">
             <div class="off-screen-menu">
-                <a href="#hero"><img class="mobile-logo" src="/images/logo.png" alt="RWA logo"></a>
+                <a href="#hero"><img class="mobile-logo" src="images/logo.png" alt="RWA logo"></a>
                 <a href="#roster">Roster</a>
                 <a href="#rules">Rules</a>
                 <a href="#journal">Journal</a>
                 <a href="#tutorial">Tutorial</a>
                 <a href="#game">Game</a>
             </div>
-            
+
             <div class="menu">
                 <span></span>
                 <span></span>
@@ -39,7 +39,7 @@
         </div>
 
         <nav class="left-nav">  
-            <a href="#hero"><img class="logo" src="/images/logo.png" alt="RWA logo"></a>
+            <a href="#hero"><img class="logo" src="images/logo.png" alt="RWA logo"></a>
             <a href="#hero">Home</a>
             <a href="#roster">Roster</a>
             <a href="#rules">Rules</a>
@@ -54,7 +54,7 @@
     </header>
 
     <div id="cursor"></div>
-    <link rel="stylesheet" href="styles/description.css">
+
     <main>
         <section class="hero" id="hero">
             <h1>RWA Robotics: Clue Edition</h1>
@@ -62,6 +62,12 @@
         </section>
         <section class="welcome" id="welcome">
             <h2>Welcome to our website</h2>
+        <p class="welcome-site">
+            <span class="welcome-royal">
+                 Welcome to the Royal West website!
+            </span>
+            Here you'll have to unlock your inner detective and follow the clues until the end to catch the killer. Discover about our mysterious theme, school, and what everybody did to make this year's robotics team come to life. Will you catch the killer?
+        </p>
         </section>
         <section id="school">
             <h2>Our School</h2>
@@ -70,23 +76,79 @@
                 <iframe class="maps-figure" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.1127607943326!2d-73.64582944442883!3d45.45048670234028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172a328fdf07%3A0x2e514800dddc679e!2sRoyal%20West%20Academy!5e0!3m2!1sen!2sca!4v1762204939619!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
         </section>
+
         <section id="clue-edition">
             <h2>RWA Robotics: Clue Edition</h2>
         </section>
+
         <section id="roster">
-            <h2>Meet the team</h2>
+            <div class='notebook-page'>
+            <h3 class='nb-name'>Alex Chen</h3>
+            <p class='nb-role'>Programmer</p>
+
+            <ul class='nb-list'>
+                <li>Weapon: Candlestick</li>
+                <li>Room: Ballroom</li>
+                <li class='nb-final'>
+                Final words: <span class='final-redacted'>[redacted]</span>
+                </li>
+            </ul>
+            </div>
         </section>
+
         <section id="rules">
-            <h2>Moduel rules</h2>
-        <p class="game-pieces">
-            <span class="game-piece-title">
-                Game pieces
-            </span>
-            There are three different game pieces, the Fan, the Core and the Turbine. These pieces come in different colors: blue, yellow, and red. The blue and yellow pieces represent the working parts, while the red pieces represent the broken parts that can only be used in repair stations. Robots can only carry one piece at a time, it can either be their teams color or red. If a piece rolls off the playing field, it is unusable for the rest of the game.
-        </p>
-        <img class="turbine-img" src="thingy.jpeg" alt="Image of turbines">
+            <h2>Møduel rules</h2>
+
+            <section>
+                <strong>Mø-Duel</strong>, the new CRC robotics game that challenges teams to design and create robots that can work together to score as many points as possible during five-minute matches also known as heats.
+                Each heat is played on an 8-by-5 tile field with bumps and uneven surfaces, making this years driving much harder than past years.
+                Four robots compete at once (<strong>two blue and two yellow</strong>) forming temporary alliances. Every robot begins on its team's colored tile and is only considered active when it leaves it's starting zone.
+            </section>
+            <section>
+                <h3>Game Pieces</h3>
+                There are three types of pieces on the field:
+                <ul>
+                    <li>Fan</li>
+                    <li>Core</li>
+                    <li>Turbine</li>
+                </ul>
+            </section>
+            <section>
+                Each piece comes in <strong>blue, yellow, or red</strong>:
+                <ul>
+                    <li><strong>Blue/Yellow pieces</strong> → working parts</li>
+                    <li><strong>Red pieces</strong> → broken parts (usable only in repair stations)</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h4>IMPORTANT!</h4>
+                Robots are only able to carry <strong>one piece at a time</strong>, either in their team's color or red. Any piece that rolls off the field is <strong>out of play for the rest of the heat</strong>.
+            </section>
+            <section>
+                <h3>How to Score</h3>
+                <h4>Engine Scoring</h4>
+                Place your team's color piece into an engine:
+                <ul>
+                    <li>1 piece →<strong> 50 points</strong></li>
+                    <li>2 pieces →<strong> 100 points</strong></li>
+                    <li>3 pieces → <strong> 250 points</strong></li>
+                </ul>
+                <h4>Repair Station</h4>
+                Place a <strong>red piece</strong> into a repair station:
+                <ul><li>Red piece →<strong> 30 points</strong></li></ul>
+                <h4>Spare Parts Zone</h4>
+                Stack your team's colored pieces in the spare parts zone:
+                <ul><li>Each piece →<strong> 40 points</strong></li></ul>
+                <h4>End-Game Bonuses</h4>
+                At the end of each heat, two bonuses are applied:
+                <span class="bullet-points">Team with the tallest stack →<strong> +60%</strong></span>
+            </section>
+
+            <img class="turbine-img" src="images/turbines.png" alt="Image of turbines">
+
         </section>
-        
+       
         <section id="journal">
             <h2>Team Journal</h2>
         </section>
@@ -105,14 +167,14 @@
             <span class="game-piece-">
                 Game pieces
             </span>
-           Royal West Academy is a school based not only on academic performance but equally values ensuring that every student thrives in a safe and supportive environment. We at Royal West have the opportunity to explore a variety of fields, including languages, sciences, technology, and the arts. Graduates leave with vital life skills such as leadership, independence, and self-discipline, while learning and maintaining good study habits throughout. Our school offers over 100 different extracurricular activities and clubs to take part in,ensuring each and every student can find something that interests them. From thrilling field trips, and fun events like bake sales and dress-down days. At RWA, we go above and beyond to make sure our students reach for the stars. 
+           Royal West Academy is a school based not only on academic performance but equally values ensuring that every student thrives in a safe and supportive environment. We at Royal West have the opportunity to explore a variety of fields, including languages, sciences, technology, and the arts. Graduates leave with vital life skills such as leadership, independence, and self-discipline, while learning and maintaining good study habits throughout. Our school offers over 100 different extracurricular activities and clubs to take part in,ensuring each and every student can find something that interests them. From thrilling field trips, and fun events like bake sales and dress-down days. At RWA, we go above and beyond to make sure our students reach for the stars.
         </p>
         </section>
-        
+       
     </main>
 
     <canvas id="bg"></canvas>
-    
+   
     <script src="./scripts/general.js"></script>
     <script type="module" src="./scripts/three.js"></script>
 </body>
