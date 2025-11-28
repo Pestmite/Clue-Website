@@ -29,3 +29,11 @@ body {
   height: 36px;
   box-shadow: 0 0 10px rgb(181, 35, 181);
 }
+
+main.pre-start {
+  display: none;
+}
+
+.pre-hero.started {
+  display: none;
+}

@@ -1,8 +1,13 @@
+import { goTopDown } from "./three.js";
+
 const header = document.querySelector('header');
 const subheaderLink = document.querySelectorAll('a[href^="#"]');
 const menu = document.querySelector('.menu');
 const offScreenMenu = document.querySelector('.off-screen-menu');
 const cursorElement = document.getElementById('cursor');
+const preHero = document.querySelector('.pre-hero');
+const getStarted = document.querySelector('.pre-hero a');
+const main = document.querySelector('main');
 
 /* Satisfying Scrolling */
 subheaderLink.forEach(navLink => {
@@ -59,4 +64,12 @@ document.addEventListener('mousemove', (e) => {
   } else {
     cursorElement.classList.remove('cursor-pointer');
   }
+});
+
+/* Get Started */
+getStarted.addEventListener('click', () => {
+  main.classList.remove('pre-start');
+  preHero.classList.add('started');
+
+  goTopDown();
 });

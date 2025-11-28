@@ -2,8 +2,11 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const STARTz = 50;
+const STARTz = 40;
+const STARTy = 20;
+const STARTx = 0;
 const STARCOUNT = 200;
+const topDownDuration = 500;
 
 const scene = new THREE.Scene();
 
@@ -15,7 +18,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(STARTz);
+camera.position.set(STARTx, STARTy, STARTz);
 
 renderer.render(scene, camera);
 
@@ -32,6 +35,10 @@ loader.load('/models/rwa.glb', gltf => {
 
   animate();
 
+  document.body.onscroll = moveCamera;
+
+  RWAModel.rotation.y = Math.PI * 1.5;
+
   Array(500).fill().forEach(addStar);
 });
 
@@ -45,16 +52,20 @@ const lightHelper = new THREE.PointLightHelper(pointLight)
 const gridHelper = new THREE.GridHelper(200, 50)
 // scene.add(gridHelper);
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.minDistance = 10;
+controls.maxDistance = 180;
 
 function animate() {
   requestAnimationFrame(animate);
 
+  camera.position.y = Math.max(camera.position.y, 0); // Can't look below model
+
   // RWAModel.rotation.x += 0.002;
-  RWAModel.rotation.y += 0.005;
+  // RWAModel.rotation.y += 0.005;
   // RWAModel.rotation.z += 0.007;
 
-  // controls.update();
+  controls.update();
 
   renderer.render(scene, camera);
 }
@@ -75,23 +86,45 @@ function addStar() {
   scene.add(star);
 }
 
-
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
   camera.position.z = t * 0.01 + STARTz;
-
-  RWAModel.position.x = t * -0.0015;
-  RWAModel.position.z = t * -0.0015;
+  camera.position.y = t * 0.01 + STARTy;
+  camera.position.x = t * 0.01 + STARTx;
 }
-
-document.body.onscroll = moveCamera;
 
 function resizeCanvas() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+export function goTopDown() {
+  const targetPos = new THREE.Vector3(0, 80, 0);
+  const targetRot = new THREE.Euler(-Math.PI / 2, 0, 0);
+
+  const startPos = camera.position.clone();
+  const startRot = camera.rotation.clone();
+
+  const startTime = performance.now();
+
+  function step() {
+    const t = Math.min((performance.now() - startTime) / topDownDuration, 1);
+
+    camera.position.lerpVectors(startPos, targetPos, t);
+
+    camera.rotation.x = startRot.x + (targetRot.x - startRot.x) * t;
+    camera.rotation.y = startRot.y + (targetRot.y - startRot.y) * t;
+    camera.rotation.z = startRot.z + (targetRot.z - startRot.z) * t;
+
+    controls.update();
+    if (t < 1) requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+  controls.enabled = false;
 }
 
 window.addEventListener('resize', resizeCanvas);

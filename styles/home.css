@@ -17,7 +17,7 @@ main > section {
     height: 110dvh;
 }
 
-.hero h1 {
+.hero h1, .pre-hero h1 {
     position: absolute;
     top: 120px;
     text-align: center;
@@ -27,7 +27,7 @@ main > section {
     width: calc(100vw - 100px);
 }
 
-.hero a {
+.hero a, .pre-hero a {
     background-color: rgb(181, 35, 181);
     position: absolute;
     bottom: 100px;
@@ -43,7 +43,11 @@ main > section {
     font-weight: 600;
 }
 
-.hero a:hover {
+.pre-hero a, .pre-hero h1 {
+    position: fixed;
+}
+
+.hero a:hover, .pre-hero a:hover {
     padding: 16px 32px;
     box-shadow: 0 0 20px rgb(206, 112, 206);
 }
