@@ -64,6 +64,12 @@ document.addEventListener('mousemove', (e) => {
   } else {
     cursorElement.classList.remove('cursor-pointer');
   }
+  
+  if (cursor === "pointer" || el.classList.contains("left-nav")) {
+    cursorElement.classList.add("cursor-pointer");
+  } else {
+    cursorElement.classList.remove("cursor-pointer");
+  }
 });
 
 /* Get Started */
@@ -73,3 +79,8 @@ getStarted.addEventListener('click', () => {
 
   goTopDown();
 });
+
+main.classList.remove('pre-start');
+  preHero.classList.add('started');
+
+  goTopDown();

@@ -12,6 +12,23 @@ main > section {
     scroll-snap-stop: always;
 }
 
+.inner-section {
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(194, 194, 194, 0.392);
+    align-items: center;
+    backdrop-filter: blur(4px);
+    color: rgb(218, 218, 218);
+    transition: background-color .5s;
+}
+
+.inner-school {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
 .hero {
     height: 110vh;
     height: 110dvh;
@@ -52,14 +69,9 @@ main > section {
     box-shadow: 0 0 20px rgb(206, 112, 206);
 }
 
-.inner-school {
-    display: flex;
-    justify-content: space-between;
-}
-
 .maps-figure {
     border-radius: 20px;
-    width: 40vw;
     height: 520px;
+    width: 100%;
     border: none;
 }

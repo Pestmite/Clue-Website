@@ -16,19 +16,20 @@ h1 {
 }
 
 nav, .menu {
-	height: 32px;
-	opacity: 0.8;
-	border-radius: 32px;
-	padding: 12px 48px 12px 36px;
-	max-width: 600px;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	background-color: rgb(52, 52, 52);
-	align-items: center;
-	color: rgb(218, 218, 218);
-	transition: background-color .5s;
+    height: 32px;
+    backdrop-filter: blur(4px);
+    border-radius: 32px;
+    padding: 12px 48px 12px 36px;
+    max-width: 600px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(127, 127, 127, 0.392);
+    align-items: center;
+    color: rgb(218, 218, 218);
+	overflow: hidden;
+    transition: background-color .5s, box-shadow .3s;
 }
 
 .right-nav {
@@ -39,7 +40,7 @@ nav, .menu {
 nav a, .off-screen-menu a {
 	color: rgb(218, 218, 218);
 	text-decoration: none;
-	transition: color .15s, font-size .15s;
+	transition: color .15s, font-size .15s,box-shadow .3s;
 }
 
 .off-screen-menu a {
@@ -58,6 +59,15 @@ nav a, .off-screen-menu a {
 	font-weight: 800;
 }
 
+nav:not(.menu):hover {
+	box-shadow: 1px 1px 10px rgba(181, 35, 181, 0.712);
+	
+}
+
+.left-nav a{
+	transition: font-size .3s, color .5s;
+
+}
 .left-nav a:hover, .right-nav a:hover, .off-screen-menu a:hover {
 	color: rgb(181, 35, 181);
 	font-size: 25px;
@@ -147,6 +157,7 @@ nav a, .off-screen-menu a {
 .logo{
 	transition: height .15s;
 }
+
 .logo:hover{
 	height:100px;
 }
