@@ -75,3 +75,14 @@ main > section {
     width: 100%;
     border: none;
 }
+
+.school {
+    height: auto;
+}
+
+@media (max-width: 748px) {
+    .inner-school {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
