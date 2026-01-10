@@ -3,7 +3,7 @@ html {
 }
 
 main > section {
-    height: 600px;
+    height: auto;
     padding: 20px 32px 64px 32px;
     background-color: rgba(40, 40, 40, 0);
     color: rgb(245, 247, 248);
@@ -21,6 +21,7 @@ main > section {
     backdrop-filter: blur(4px);
     color: rgb(218, 218, 218);
     transition: background-color .5s;
+    text-align: justify;
 }
 
 .inner-school {
@@ -71,13 +72,33 @@ main > section {
 
 .maps-figure {
     border-radius: 20px;
-    height: 520px;
+    height: 100%;
     width: 100%;
     border: none;
+    min-height: 500px;
 }
 
 .school {
     height: auto;
+}
+
+.school .inner-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.school img {
+    width: 60%;
+    max-width: 320px;
+}
+
+.about-clue .inner-section {
+    display: flex;
+}
+
+.about-clue img {
+    border-radius: 24px;
+    margin-right: 20px;
 }
 
 @media (max-width: 748px) {
