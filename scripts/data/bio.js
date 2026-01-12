@@ -49,7 +49,7 @@ const teamInfo = [
       finalWords: "At least I won't have any more homework…",
       team: "Robot Team"
   }, {
-      name: "Tessa",
+      name: "Anastasia Maudilos",
       weapon: "Dagger",
       room: "Ballroom",
       finalWords: "Easy, white chocolate @naterothman",
@@ -104,7 +104,7 @@ const teamInfo = [
       team: "Robot Team"
   }, {
       name: "Sangithan Ponnampalam",
-      weapon: "LeadPipe",
+      weapon: "Lead Pipe",
       room: "Lounge",
       finalWords: "Yo never doubt me again",
       team: "Robot team"
@@ -144,7 +144,7 @@ const teamInfo = [
       weapon: "Wrench",
       room: "Library",
       finalWords: "Don't forget to...",
-      team: "Robot team"
+      team: "Mentor"
   }, {
       name: "Arissa Rahman",
       weapon: "Revolver",
@@ -183,7 +183,7 @@ const teamInfo = [
       finalWords: "can't spell team without 'me'",
       team: "Robot team"
   }, {
-      name: "Ayaan",
+      name: "Ayaan Rahman",
       weapon: "Dagger",
       room: "Lounge",
       finalWords: "Oh crap I'm gonna die now...",
@@ -231,7 +231,7 @@ const teamInfo = [
       finalWords: "Eolande is the killer!",
       team: "Robot team"
   }, {
-        name: "Aristotle Semergian",
+      name: "Aristotle Semergian",
       weapon: "Wrench",
       room: "Study",
       finalWords: "Yes, I am the real Aristotle",
@@ -243,5 +243,35 @@ const teamInfo = [
       room: "Billiard Room",
       finalWords: "Nate did it...he's the murderer...tho ill always love you Papa😵",
       team: "Robot team"
+  }, {
+      name: "Sahej Mand",
+      weapon: "Revolver",
+      room: "Conservatory",
+      finalWords: "if i were to reincarnate as a piece of code, i hope i'd come back as a for loop",
+      team: "Coding team"
+  }, {
+      name: "Hayley Lapensee",
+      weapon: "Candlestick",
+      room: "Billiard Room",
+      finalWords: "I'm a real ginger trust ",
+      team: "Robot team"
+  }, {
+      name: "Sarah Bilodeau-Cheong",
+      weapon: "Lead Pipe",
+      room: "Library Room",
+      finalWords: "Eolande is the killer!",
+      team: "Robot team"
+  }, {
+      name: "William Rivet",
+      weapon: "Revolver",
+      room: "Study Room",
+      finalWords: "Good luck finding my secrets",
+      team: "Kiosk team"
+  }, {
+      name: "Mr. Northey",
+      weapon: "Candlestick",
+      room: "Billiard Room",
+      finalWords: "It... wasn't...",
+      team: "Mentor"
   }
 ]
