@@ -1,0 +1,42 @@
+.checklist-section {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.checklist-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: rgb(181, 35, 181);
+  box-shadow: 0 0 8px rgb(206, 112, 206);
+  margin-top: 12px;
+}
+
+.checklist-section img {
+  width: 40px;
+}
+
+.checklist-section h4 {
+  margin: 12px 0 4px 0;
+}
+
+.checklist {
+  height: 360px;
+  width: 200px;
+  background-color: rgba(191, 191, 191, 0.798);
+  backdrop-filter: blur(4px);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+  accent-color: rgb(181, 35, 181);
+  transition: height 0.3s;
+}

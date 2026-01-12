@@ -101,6 +101,22 @@ main > section {
     margin-right: 20px;
 }
 
+@media (max-width: 920px) {
+    .about-clue .inner-section {
+        flex-direction: column;
+    }
+
+    .about-clue p {
+        margin: 0 0 12px 0;
+        order: -1;
+    }
+
+    .about-clue img {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 748px) {
     .inner-school {
         grid-template-columns: 1fr;

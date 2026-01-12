@@ -16,20 +16,20 @@ h1 {
 }
 
 nav, .menu {
-    height: 32px;
-    backdrop-filter: blur(4px);
-    border-radius: 32px;
-    padding: 12px 48px 12px 36px;
-    max-width: 500px;
-    z-index: 10;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(127, 127, 127, 0.392);
-    align-items: center;
-    color: rgb(218, 218, 218);
-	overflow: hidden;
-    transition: background-color .5s, box-shadow .3s;
+  height: 32px;
+  backdrop-filter: blur(4px);
+  border-radius: 32px;
+  padding: 12px 48px 12px 36px;
+  max-width: 500px;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(127, 127, 127, 0.392);
+  align-items: center;
+  color: rgb(218, 218, 218);
+  overflow: hidden;
+  transition: background-color .5s, box-shadow .3s;
 }
 
 .right-nav {
