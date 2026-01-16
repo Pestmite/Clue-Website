@@ -72,6 +72,52 @@ document.addEventListener('mousemove', (e) => {
   }
 });
 
+function applyTransform(cardTilt, tiltX, tiltY, flipped) {
+  cardTilt.style.transform =
+    `rotateX(${tiltX}deg) rotateY(${tiltY + (flipped ? 180 : 0)}deg) translateZ(4px)`;
+}
+
+export function cardMovement() {
+  const containers = document.querySelectorAll('.card-container');
+  
+  containers.forEach(container => {
+    const cardTilt = container.querySelector('.card-tilt');
+
+    let flipped = false;
+    let isFlipping = false;
+    let tiltX = 0;
+    let tiltY = 0;
+
+    container.addEventListener('mousemove', e => {
+      if (isFlipping) return;
+      
+      const rect = container.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const midX = rect.width / 2;
+      const midY = rect.height / 2;
+
+      tiltY = ((x - midX) / midX) * 12;
+      tiltX = -((y - midY) / midY) * 12;
+
+      applyTransform(cardTilt, tiltX, tiltY, flipped);
+    });
+
+    cardTilt.addEventListener('click', () => {
+      isFlipping = true;
+      flipped = !flipped;
+      applyTransform(cardTilt, tiltX, tiltY, flipped);
+
+      setTimeout(() => {
+        isFlipping = false;
+      }, 300);
+    });
+  });
+}
+
+
 /* Get Started */
 getStarted.addEventListener('click', () => {
   main.classList.remove('pre-start');
@@ -81,6 +127,6 @@ getStarted.addEventListener('click', () => {
 });
 
 main.classList.remove('pre-start');
-  preHero.classList.add('started');
+preHero.classList.add('started');
 
-  goTopDown();
+goTopDown();

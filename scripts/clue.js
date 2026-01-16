@@ -1,9 +1,12 @@
+import { cardMovement } from "./general.js";
+
 const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
-const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench","Dagger"]
+const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench", "Dagger"]
 const CLUE_ROOMS = ["Library", "Hall", "Kitchen", "Study", "Lounge", "Conservatory", "Billiard Room", "Ballroom", "Dining Room"]
 
 const checklist = document.querySelector('.checklist');
 const checklistButton = document.querySelector('.checklist-button');
+const cardContainer = document.querySelector('.card-section');
 
 const murdering = {
     character: CLUE_CHARACTERS[Math.floor(Math.random() * CLUE_CHARACTERS.length)],
@@ -39,3 +42,24 @@ checklistItem.forEach(item => {
         item.classList.toggle('strikethrough');
     });
 });
+
+Object.values(murdering).forEach(card => {
+    cardContainer.innerHTML += `<div class="card-container">
+        <div class="card-tilt">
+            <div class="card">
+                <div class="card-front">
+                    <img src="./images/logo.png" alt="clue-logo">
+                </div>
+
+                <div class="card-back">
+                    <img src="./images/cards/${card}.png" alt="${card}">
+                    <div class="card-info">
+                        <p>${card}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
+});
+
+cardMovement();

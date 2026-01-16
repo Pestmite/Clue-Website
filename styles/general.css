@@ -47,3 +47,8 @@ main.pre-start {
 .strikethrough {
   text-decoration: line-through;
 }
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
