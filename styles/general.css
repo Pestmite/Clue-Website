@@ -48,7 +48,7 @@ main.pre-start {
   text-decoration: line-through;
 }
 
-img {
+img, h1 {
   -webkit-user-drag: none;
   user-select: none;
 }

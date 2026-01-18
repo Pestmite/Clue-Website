@@ -122,11 +122,7 @@ export function cardMovement() {
 getStarted.addEventListener('click', () => {
   main.classList.remove('pre-start');
   preHero.classList.add('started');
-
-  goTopDown();
 });
 
 main.classList.remove('pre-start');
 preHero.classList.add('started');
-
-goTopDown();
