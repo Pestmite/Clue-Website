@@ -273,5 +273,17 @@ const teamInfo = [
       room: "Billiard Room",
       finalWords: "It... wasn't...",
       team: "Mentor"
+  }, {
+      name: "Nate Rothman",
+      weapon: "Dagmar",
+      room:"Kitchen",
+      finalWords: "Red Bull + six 3 am nights gives u website",
+      team: "Website team"
+  }, {
+      name: "Charlie Chaki",
+      weapon: "Dagger",
+      room: "Billiard room",
+      finalWords: "What does this button do?",
+      team: "Website team"
   }
 ]
