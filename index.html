@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -87,9 +88,17 @@
         <section id="about-clue" class="about-clue">
             <h2>About Clue</h2>
             <section class="inner-section">
-                <img src="images/clue-board.jpg" alt="clue board">
-                <p><p>Clue is a famous murder mystery board game. Originally named <i>Murder!</i>, the goal of the game is to find out who murdered Mr. Boddy. As the game goes on, the players may ask each other questions and use their critical thinking skills to deduce three things: the murderer, the murder weapon and the scene of the crime. Once players believe they have figured out all three unknowns they must move to the center  of the board and submit their guess. The first player to find these three things correctly wins. 
-                </p>
+                <section class="carousel-container">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="./images/clue-board.jpg" alt="old Clue board">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <p>Clue is a famous murder mystery board game. Originally named <i>Murder!</i>, the goal of the game is to find out who murdered Mr. Boddy. As the game goes on, the players may ask each other questions and use their critical thinking skills to deduce three things: the murderer, the murder weapon and the scene of the crime. Once players believe they have figured out all three unknowns they must move to the center  of the board and submit their guess. The first player to find these three things correctly wins.</p>
             </section>
         </section>
 
@@ -181,7 +190,13 @@
        
         <section id="journal">
             <h2>Team Journal</h2>
-            <p>View the journey each team took since september...</p>
+            <p>View the journey each team has kept since november...</p>
+            <div class="journal-selector">
+                <button href="index.html" class="journal-link selected">Robot</button>
+                <button href="simulation.html" class="journal-link">Website</button>
+                <button href="customize.html" class="journal-link">Film</button>
+                <button href="about.html" class="journal-link">Kiosk</button>
+            </div>
             <section class="book"></section>
         </section>
 

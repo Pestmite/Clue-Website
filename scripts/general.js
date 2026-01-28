@@ -1,6 +1,6 @@
 import { goTopDown } from "./three.js";
 
-const header = document.querySelector('header');
+const notepad = document.querySelector('.checklist-section');
 const subheaderLink = document.querySelectorAll('a[href^="#"]');
 const menu = document.querySelector('.menu');
 const offScreenMenu = document.querySelector('.off-screen-menu');
@@ -20,25 +20,25 @@ subheaderLink.forEach(navLink => {
   });
 });
 
-/* Header disappearing */
-/* let startY = 0;
+/* Notebook disappearing */
+let startY = 0;
 let HIDEMIN = 80;
 
 window.addEventListener('scroll', () => {
   const currentY = window.scrollY;
 
   if (currentY > HIDEMIN) {
-    if (currentY > startY && innerWidth > 800) {
-      header.style.transform = 'translateY(-150%)';
+    if (currentY > startY) {
+      notepad.style.transform = 'translateY(150%)';
     } else {
-      header.style.transform = 'translateY(0)';
+      notepad.style.transform = 'translateY(0)';
     }
   } else {
-    header.style.transform = 'translateY(0)';
+    notepad.style.transform = 'translateY(0)';
   }
 
   startY = currentY;
-}); */
+});
 
 /* Mobile Menu */
 menu.addEventListener('click', () => {
