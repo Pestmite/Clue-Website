@@ -190,7 +190,7 @@ main > section {
     left: 8px;
     right: 8px;
     background-color: rgb(217, 102, 217);
-    border-radius: 8px 8px 20px 20px;
+    border-radius: 8px 8px 26px 26px;
 }
 
 .card-info p {
@@ -360,4 +360,95 @@ img.cover-image {
 
 .back-button {
     left: 16px;
+}
+
+.card-list {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: scroll;
+    height: 400px;
+}
+
+.answer-section h2 {
+    margin: 40px 0 20px 0;
+}
+
+.answer-section {
+    position: relative;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.selector-card {
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 35px;
+    background: rgb(34, 34, 34);
+    box-shadow: -1px -1px 6px rgb(187, 144, 187);
+    transition: 0.2s ease-out;
+    overflow: hidden;
+}
+
+.selected-card {
+    box-shadow: 0 0 20px rgb(181, 35, 181);
+}
+
+.selector-card img {
+    object-fit: cover;
+    width: 80%;
+    border-radius: 4px;
+}
+
+.selector-card .rooms {
+    height: 100px;
+}
+
+.selector-card .weapons {
+    width: 60%;
+}
+
+.selector-card:hover {
+    transform: translateY(-20px) rotateZ(-10deg);
+    box-shadow: 0 0 20px rgb(181, 35, 181);
+}
+
+.selector-card:hover ~ .selector-card {
+    transform: translateX(48px);
+}
+
+.selector-card:not(:first-child) {
+    margin-left:-100px;
+}
+
+.submit-button {
+    background-color: rgb(186, 186, 186);
+    padding: 12px 28px;
+    border-radius: 16px;
+    border: none;
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.can-submit {
+    background-color: rgb(217, 102, 217);
+}
+
+.can-submit:hover {
+    background-color: rgb(181, 35, 181);
+    color: white
 }
