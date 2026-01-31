@@ -1,10 +1,33 @@
 export const journals = {
-  "robot": [
-    ["September", "We didn't do anything", "sep-1.jpg"],
-    ["October", "We didn't do anything", ""],
-    ["November", "We wen't over the rules of the game, brainstormed ideas, and discussed a building timeline. We generated many ideas but the meeting was disorganized.", ""],
-    ["December", "We wen't over the rules of the game, brainstormed ideas, and discussed a building timeline. We generated many ideas but the meeting was disorganized.", ""],
-    ["January", "We wen't over the rules of the game, brainstormed ideas, and discussed a building timeline. We generated many ideas but the meeting was disorganized.", ""],
+  "Robot": [
+    ["November", "<p>At the beginning of <strong>November</strong>, the robot team went over the game rules, brainstormed ideas for the robot, and discussed building timelines. </p><p>We fixed the strafing code for last year's robot. Later on, the team identified why the wheels wouldn't work, and started trying to fix them. In the end we had to replace the mecanum wheels on the base.", "r.1.nov.jpg"],
+    ["November (cont'd)", "<p>We started building a new base and rereading the rules, fixed circuits, came up with ideas and shared them. Unfortunately, it was drawing close to the end of the month, and we still had to work on our old robot and finish the design for the new one.</p><p>Luckily, we were productive, and we coded the old robot, replaced motors, and made prototypes for the new robot.</p>", "r.2.nov.jpeg"],
+    ["December", "<p>We started off <strong>December</strong> by installing the switch platform and making the lift. We worked on the claw design, which would become a critical problem for the robot team. After ordering all the parts we needed, we installed the kill switch and mounted the lift that would support the claw onto our robot. </p><p>December was one of the team's most productive months thanks to good planning, teamwork, and motivation.</p>", "r.1.dec.jpg"],
+    ["December (cont'd)", "<p>At times, we even had too many people and we weren't sure how to utilize everyone's skills. Even with all this hard work and progress, we unfortunately wouldn't have a functioning claw before leaving for the holidays. </p><p>Overall, a large portion of December was dedicated to brainstorming, the lift, and finalizing the claw design, which left us plenty of time in January to work on improving the robot. </p>", "r.2.dec.jpg"],
+    ["January", "<p><strong>January</strong> started off strong, when we completed the whole lift mechanism after adjusting the design a little. This took a whole session of work, but it helped motivate the team. We are all visibly motivated by the end of the session. </p><p>By this point, we were testing different versions of the claw, and editing some of last year's code. As the competition date loomed over our heads, we finalized the robot and added finishing touches.</p>", "r.1.jan.jpg"],
     []
-  ]
+  ],
+  "Film": [
+    ["November", "<p>In <strong>November</strong>, the film production involved:</p><ul><li>Describing and assigning actors to their roles</li><li>Planning the filming schedule</li><li>Tracking our progress through spreadsheets</li></ul> <p>We started filming and capturing the first few seconds of our movie while editing at the same time. We faced many challenges, such as missing actors and the need for additional props.</p>", "f.1.nov.jpeg"],
+    ["November (cont'd)", "<p>Overall though, our rehearsals went well, with actors learning and memorizing their lines. Many delays occurred because of last minute actor cancellation and script printing issues. The process was well organized, with our filming routines confirmed.</p>", "f.2.nov.jpeg"],
+    ["December", "<p>In <strong>December</strong>, we focused on filming dialogue scenes and character movement, after reviewing our footage from November and learning which camera settings worked best.</p><p>We were able to film the prologue and most of the death scenes. With these videos we were able to upload this footage and audio to Adobe.Although all this was done, we still had many tasks left such as completing filming and editing our movie.</p>", "f.1.dec.jpeg"],
+    ["December (cont'd)", "<p>We faced many challenges; delays due to absent actors and background noises from people passing by, which required multiple takes for some shots. Mr. MacPherson has now replaced Mr. Nemeth in the movie, which enhanced the production because of his enthusiasm and acting skills.</p><p>Overall, December was a great month because we were able to advance with our editing and face all the challenges that came our way.</p>", "f.2.dec.jpeg"],
+    ["January", "<p>In <strong>January</strong>, we were able to wrap up our filming, with the first scene filmed except for two lines we had already done and we finished editing the prologue.</p><p>We also captured most of the remaining footage that needed to be filmed, leaving us with only about 15 seconds left to film. We faced technical issues with batteries, but we were able to circumvent those issues and stayed on task.</p>", "f.1.jan.jpeg"],
+    ["January (cont'd)", "<p>We were able to get some cool dolly shots thanks to a 4-hour shooting time and phenomenal actors. We also encountered missing props but no significant problems appeared. With all that filming completed we still had to work on most the editing part which was not as fun but necessary for the movie to be as good as it can be.</p><p>Overall, we spent the first half of the month finishing filming our film and started editing for the second half of January.", "f.2.jan.JPG"],
+    []
+  ],
+  "Kiosk": [
+    ["November", "", ""],
+    ["December", "", ""],
+    ["January", "", ""],
+    []
+  ],
+  "Website": [
+    ["November", "<p>November was a busy month for the website team. Having already completed a website structure and decided the basics of how the website would look, we began working on the header and creating a distinctive style. <p></p>We settled on a dark mode website with glassmorphism elements and purple highlights. Instead of having multiple pages, we decided on a single page with distinct sections.</p>", ""],
+    ["November (cont'd)", "<p>By this point, we had decided that we wanted to implement a 3d aspect to the website, which took the form of a rotatable replica of the Royal West Academy, acting as the “clue mansion.” <p></p>Our one-page website allowed us to play around with 3d scroll movement. As the month came to a close, we had a website structure and unique website style that we could easily build upon.</p>", ""],
+    ["December", "<p>December was much more focused on content than coding. We completed all the sections (except for the ones that required other groups, such as the journal), and even added extra information, such as the “About Clue” section.<p></p>This would prove useful for another one of our ideas; what if the whole website was a game of clue? Each time you opened the website, it would randomly generate certain elements while omitting others.</p>", ""],
+    ["December (cont'd)", "<p>Whichever ones were missing would give you the room, weapon, and character. Before leaving for the break, we made sure to add all the content to the website.</p>", ""],
+    ["January", "<p>We began January by adding a notepad to the bottom-right corner of the screen, so that you could keep track of what cards you had found. We continued by adding all the team data, journals, and implementing the Clue game, but we won't spoil how we did that!</p><p>The rest of the month was spent adding translations and polishing the website.</p>", ""],
+    []
+  ],
 }

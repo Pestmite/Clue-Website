@@ -1,6 +1,6 @@
 import { goTopDown } from "./three.js";
 
-const header = document.querySelector('header');
+const notepad = document.querySelector('.checklist-section');
 const subheaderLink = document.querySelectorAll('a[href^="#"]');
 const menu = document.querySelector('.menu');
 const offScreenMenu = document.querySelector('.off-screen-menu');
@@ -8,6 +8,8 @@ const cursorElement = document.getElementById('cursor');
 const preHero = document.querySelector('.pre-hero');
 const getStarted = document.querySelector('.pre-hero a');
 const main = document.querySelector('main');
+const slides = document.querySelectorAll('.slider img');
+const dots = document.querySelectorAll('.slider-nav a');
 
 /* Satisfying Scrolling */
 subheaderLink.forEach(navLink => {
@@ -20,25 +22,25 @@ subheaderLink.forEach(navLink => {
   });
 });
 
-/* Header disappearing */
-/* let startY = 0;
+/* Notebook disappearing */
+let startY = 0;
 let HIDEMIN = 80;
 
 window.addEventListener('scroll', () => {
   const currentY = window.scrollY;
 
   if (currentY > HIDEMIN) {
-    if (currentY > startY && innerWidth > 800) {
-      header.style.transform = 'translateY(-150%)';
+    if (currentY > startY) {
+      notepad.style.transform = 'translateY(150%)';
     } else {
-      header.style.transform = 'translateY(0)';
+      notepad.style.transform = 'translateY(0)';
     }
   } else {
-    header.style.transform = 'translateY(0)';
+    notepad.style.transform = 'translateY(0)';
   }
 
   startY = currentY;
-}); */
+});
 
 /* Mobile Menu */
 menu.addEventListener('click', () => {
@@ -115,8 +117,42 @@ export function cardMovement() {
       }, 300);
     });
   });
+};
+
+function chageDot(entry) {
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = dot.getAttribute('href');
+      const targetSlide = document.querySelector(targetId);
+
+      targetSlide.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start'
+      });
+    });
+  });
+
+  const selected = document.querySelector('.slider-nav .active');
+
+  selected.classList.remove('active');
+
+  const id = entry.target.id;
+  const selectedDot = document.querySelector(`.slider-nav a[href="#${id}"]`)
+
+  selectedDot.classList.add('active');
 }
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      chageDot(entry);
+    }
+  });
+}, { threshold: 0.6 });
+
+slides.forEach(slide => observer.observe(slide));
 
 /* Get Started */
 getStarted.addEventListener('click', () => {

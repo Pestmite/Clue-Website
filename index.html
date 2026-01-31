@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -87,9 +88,31 @@
         <section id="about-clue" class="about-clue">
             <h2>About Clue</h2>
             <section class="inner-section">
-                <img src="images/clue-board.jpg" alt="clue board">
-                <p><p>Clue is a famous murder mystery board game. Originally named <i>Murder!</i>, the goal of the game is to find out who murdered Mr. Boddy. As the game goes on, the players may ask each other questions and use their critical thinking skills to deduce three things: the murderer, the murder weapon and the scene of the crime. Once players believe they have figured out all three unknowns they must move to the center  of the board and submit their guess. The first player to find these three things correctly wins. 
-                </p>
+                <p>Clue is a famous murder mystery board game. Originally named <i>Murder!</i>, the goal of the game is to find out who murdered Mr. Boddy. As the game goes on, the players may ask each other questions and use their critical thinking skills to deduce three things: the murderer, the murder weapon and the scene of the crime. Once players believe they have figured out all three unknowns they must move to the center  of the board and submit their guess. The first player to find these three things correctly wins.</p>
+
+                <section class="carousel-container">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <div class="slider-image-container">
+                                <img id="slide1" src="./images/board.avif" alt="old Clue board">
+                                <p>A Clue board from 1965</p>
+                            </div>
+                            <div class="slider-image-container">
+                                <img id="slide2" src="./images/inventor.avif" alt="inventor of Clue">
+                                <p>The inventor of Clue, Anthony E. Pratt</p>
+                            </div>
+                            <div class="slider-image-container">
+                                <img id="slide3" src="./images/clue-family.avif" alt="family of Clue inventor">
+                                <p>The inventor of Clue playing with his family</p>
+                            </div>
+                        </div>
+                        <div class="slider-nav">
+                            <a href="#slide1" class="active"></a>
+                            <a href="#slide2"></a>
+                            <a href="#slide3"></a>
+                        </div>
+                    </div>
+                </section>
             </section>
         </section>
 
@@ -182,7 +205,13 @@
        
         <section id="journal">
             <h2>Team Journal</h2>
-            <p>View the journey each team took since september...</p>
+            <p>View the journey each team has kept since november...</p>
+            <div class="journal-selector">
+                <button href="index.html" class="journal-link selected">Robot</button>
+                <button href="simulation.html" class="journal-link">Website</button>
+                <button href="customize.html" class="journal-link">Film</button>
+                <button href="about.html" class="journal-link">Kiosk</button>
+            </div>
             <section class="book"></section>
         </section>
 
@@ -197,9 +226,9 @@
         <section id="answer">
             <h2>Whodunnit?</h2>
             <section class="inner-section">
-                <p>It's the moment we've all been waiting for. Who killed Mr. Nemeth? You've found the murderer, you have the weapon, hold on… what room did he get murdered in? If you go back to each section of the website (about us, roster, journal, etc.), you will notice each one has a theme surrounding a room, but one room is missing. The missing room will give you the missing piece of the puzzle.</p>
+                <p>It's the moment we've all been waiting for. Who killed our mentor? You've found the murderer, you have the weapon, hold on… what room did he get murdered in? If you go back to each section of the website (about us, roster, journal, etc.), you will notice each one has a theme surrounding a room, but one room is missing. The missing room will give you the missing piece of the puzzle. Once you're confident enough with your guess, select one of each card and submit your guess for the reveal.</p>
             </section>
-            <section class="card-section"></section>
+            <section class="answer-section"><button class="submit-button">Submit Guess</button></section>
         </section>
     </main>
 

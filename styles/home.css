@@ -96,9 +96,72 @@ main > section {
     display: flex;
 }
 
-.about-clue img {
+.slider-wrapper {
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    max-width: 320px;
+    margin-left: 20px;
+}
+
+.slider-image-container {
+    position: relative;
+    flex: 1 0 100%;
+}
+
+.slider p {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 12px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
     border-radius: 24px;
-    margin-right: 20px;
+    max-width: 320px;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 12px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.871);
+    padding: 8px 16px;
+}
+
+.slider-nav a {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.735);
+    transition: background-color 0.3s, width 0.3s;
+}
+
+.slider-nav a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.slider-nav a.active {
+    width: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 @media (max-width: 920px) {
@@ -111,9 +174,13 @@ main > section {
         order: -1;
     }
 
-    .about-clue img {
-        margin: 0;
+    .slider {
         max-width: 100%;
+    }
+    
+    .slider img {
+        max-width: none;
+        width: 100%;
     }
 }
 
@@ -190,7 +257,7 @@ main > section {
     left: 8px;
     right: 8px;
     background-color: rgb(217, 102, 217);
-    border-radius: 8px 8px 20px 20px;
+    border-radius: 8px 8px 26px 26px;
 }
 
 .card-info p {
@@ -202,9 +269,10 @@ main > section {
     display: none;
 }
 
-.book img {
+.book img:not(.cover-image) {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 0 20px 20px 0;
 }
 
@@ -250,17 +318,90 @@ main > section {
     background-color: rgb(243, 237, 228);
     background-image: url('../images/paper.avif');
     color: rgb(0, 0, 0);
+    outline: 6px solid rgb(50, 48, 125);
+}
+
+.front p {
+    text-indent: 28px;
+    margin-top: 0;
 }
 
 .back-cover {
     background-image: none;
     background-color: rgb(50, 48, 125);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .back {
     background-color: rgb(50, 48, 125);
     box-sizing: border-box;
     border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    outline: 6px solid rgb(50, 48, 125);
+}
+
+.back h2 {
+    color: white;
+    margin-top: -20px;
+    font-size: 32px;
+}
+
+.end-title {
+    color: white;
+    font-size: 48px;
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    top: 80px;
+    
+}
+
+.journal-team {
+    position: absolute;
+    bottom: 48px;
+    color: red;
+    border: solid 2px red;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+.journal-selector {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    padding: 6px 12px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(127, 127, 127, 0.392);
+    border-radius: 20px;
+    margin-bottom: 32px;
+}
+
+.journal-selector .selected {
+    background-color: rgb(0, 0, 0);
+	box-shadow: 0 0 4px rgba(181, 35, 181, 0.712);
+}
+
+.journal-link {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: none;
+}
+
+.journal-link:hover {
+  cursor: pointer;
+}
+
+img.cover-image {
+    width: 80%;
 }
 
 .next-button, .back-button {
@@ -286,4 +427,95 @@ main > section {
 
 .back-button {
     left: 16px;
+}
+
+.card-list {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: scroll;
+    height: 400px;
+}
+
+.answer-section h2 {
+    margin: 40px 0 20px 0;
+}
+
+.answer-section {
+    position: relative;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.selector-card {
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 35px;
+    background: rgb(34, 34, 34);
+    box-shadow: -1px -1px 6px rgb(187, 144, 187);
+    transition: 0.2s ease-out;
+    overflow: hidden;
+}
+
+.selected-card {
+    box-shadow: 0 0 20px rgb(181, 35, 181);
+}
+
+.selector-card img {
+    object-fit: cover;
+    width: 80%;
+    border-radius: 4px;
+}
+
+.selector-card .rooms {
+    height: 100px;
+}
+
+.selector-card .weapons {
+    width: 60%;
+}
+
+.selector-card:hover {
+    transform: translateY(-20px) rotateZ(-10deg);
+    box-shadow: 0 0 20px rgb(181, 35, 181);
+}
+
+.selector-card:hover ~ .selector-card {
+    transform: translateX(48px);
+}
+
+.selector-card:not(:first-child) {
+    margin-left:-100px;
+}
+
+.submit-button {
+    background-color: rgb(186, 186, 186);
+    padding: 12px 28px;
+    border-radius: 16px;
+    border: none;
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.can-submit {
+    background-color: rgb(217, 102, 217);
+}
+
+.can-submit:hover {
+    background-color: rgb(181, 35, 181);
+    color: white
 }
