@@ -36,7 +36,7 @@ function generateBook() {
       flipBook.innerHTML += `<div class="flip" id="p${i}" style="z-index: ${Object.keys(journals[journal]).length - i};">
         <div class="back">
           ${i != 0 ? `<img src="./images/journal/${journals[journal][i - 1] ? journals[journal][i - 1][2] : ""}
-          " alt="journal image"><label for="c${i}" class="next-button">Next &rarr;</label>` : `<img src="images/logo.png" alt="cover image" class="cover-image"><h2>Journal</h2><p class="journal-team">${journal} Team</p><label for="c${i}" class="next-button">Begin &rarr;</label>`}
+          " alt="journal image"><label for="c${i}" class="next-button">Next &rarr;</label>` : `<img src="./images/cards/Weapon-Clue-Card.png" alt="cover image" class="cover-image"><h2>Journal</h2><p class="journal-team">${journal} Team</p><label for="c${i}" class="next-button">Begin &rarr;</label>`}
         </div>
         <div class="front">
           <h2>${entry[0]}</h2>

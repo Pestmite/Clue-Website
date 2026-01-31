@@ -117,3 +117,9 @@ submitButton.addEventListener('click', () => {
         cardMovement();
     };
 });
+
+const innerSections = document.querySelectorAll(".inner-section");
+
+innerSections.forEach((section, i) => {
+    section.innerHTML += `<img src="./images/cards/${CLUE_ROOMS[i]}.png" alt="image of a ${CLUE_ROOMS[i]}" class="rooms-to-find">`
+});

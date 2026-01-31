@@ -162,3 +162,15 @@ getStarted.addEventListener('click', () => {
 
 main.classList.remove('pre-start');
 preHero.classList.add('started');
+
+const revealBtn = document.querySelector('.reveal-button');
+
+revealBtn.addEventListener('click', () => {
+  const allCards = document.querySelectorAll('.card-inner');
+  
+  allCards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.toggle('flipped');
+    }, i * 170);
+  });
+});

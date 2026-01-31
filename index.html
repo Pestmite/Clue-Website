@@ -29,7 +29,7 @@
                 <a href="#rules">Rules</a>
                 <a href="#journal">Journal</a>
                 <a href="#tutorial">Tutorial</a>
-                <a href="#game">Game</a>
+                <a href="#film">Film</a>
                 <a href="#answer">Result</a>
             </div>
 
@@ -46,7 +46,7 @@
             <a href="#rules">Rules</a>
             <a href="#journal">Journal</a>
             <a href="#tutorial">Tutorial</a>
-            <a href="#game">Game</a>
+            <a href="#answer">Result</a>
         </nav>
         
         <nav class="right-nav">
@@ -131,7 +131,6 @@
         <section id="rules">
             <section class="inner-section">
                 <h2>Møduel rules</h2>
-
                     <section>
                         <strong>Mø-Duel</strong>, the new CRC robotics game that challenges teams to design and create robots that can work together to score as many points as possible during five-minute matches also known as heats.
                         Each heat is played on an 8-by-5 tile field with bumps and uneven surfaces, making this years driving much harder than past years.
@@ -217,17 +216,25 @@
 
         <section id="tutorial">
             <h2>Tutorial</h2>
+            <section class="inner-section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repudiandae illum ducimus necessitatibus repellat fugiat explicabo odio eius. Itaque asperiores fuga consequatur sed voluptatem corrupti eum possimus accusantium commodi vitae excepturi voluptatum deserunt accusamus, iusto, tempore obcaecati nesciunt ducimus eaque officia nisi. Assumenda pariatur maiores eligendi enim qui minus laudantium.</section>                
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2qBlE2-WL60?si=PiYJMoYUzD8c7FTj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
         </section>
 
-        <section id="game">
-            <h2>Game</h2>
-        </section>
+        <section id="film">
+            <h2>Film</h2>
+            <section class="inner-section">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero repudiandae vitae quaerat quo consectetur nemo quam excepturi non consequuntur inventore sequi odit, quibusdam iure numquam, eum alias fugiat ad laboriosam facere saepe incidunt. Iure enim libero doloribus voluptas molestias accusamus officiis nobis, possimus, provident aut magnam est sunt qui? Dolorum.</section>
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2qBlE2-WL60?si=PiYJMoYUzD8c7FTj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+            </section>
+            </section>
 
         <section id="answer">
             <h2>Whodunnit?</h2>
             <section class="inner-section">
                 <p>It's the moment we've all been waiting for. Who killed our mentor? You've found the murderer, you have the weapon, hold on… what room did he get murdered in? If you go back to each section of the website (about us, roster, journal, etc.), you will notice each one has a theme surrounding a room, but one room is missing. The missing room will give you the missing piece of the puzzle. Once you're confident enough with your guess, select one of each card and submit your guess for the reveal.</p>
-            </section>
+            </section class="video">
             <section class="answer-section"><button class="submit-button">Submit Guess</button></section>
         </section>
     </main>
@@ -235,12 +242,13 @@
     <section class="checklist-section">
         <section class="checklist hidden"></section>
         <div class="checklist-button">
-            <img src="/images/notes.png" alt="take notes">
+            <img src="./images/notes.png" alt="take notes">
         </div>
+        <button class="reveal-button">Reveal</button>
     </section>
 
     <canvas id="bg"></canvas>
-   
+        
     <script type="module" src="./scripts/general.js"></script>
     <script type="module" src="./scripts/three.js"></script>
     <script type="module" src="./scripts/clue.js"></script>
