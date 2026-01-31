@@ -96,9 +96,72 @@ main > section {
     display: flex;
 }
 
-.about-clue img {
+.slider-wrapper {
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    max-width: 320px;
+    margin-left: 20px;
+}
+
+.slider-image-container {
+    position: relative;
+    flex: 1 0 100%;
+}
+
+.slider p {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 12px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
     border-radius: 24px;
-    margin-right: 20px;
+    max-width: 320px;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 12px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.871);
+    padding: 8px 16px;
+}
+
+.slider-nav a {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.735);
+    transition: background-color 0.3s, width 0.3s;
+}
+
+.slider-nav a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.slider-nav a.active {
+    width: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 @media (max-width: 920px) {
@@ -111,9 +174,13 @@ main > section {
         order: -1;
     }
 
-    .about-clue img {
-        margin: 0;
+    .slider {
         max-width: 100%;
+    }
+    
+    .slider img {
+        max-width: none;
+        width: 100%;
     }
 }
 

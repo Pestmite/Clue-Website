@@ -8,6 +8,8 @@ const cursorElement = document.getElementById('cursor');
 const preHero = document.querySelector('.pre-hero');
 const getStarted = document.querySelector('.pre-hero a');
 const main = document.querySelector('main');
+const slides = document.querySelectorAll('.slider img');
+const dots = document.querySelectorAll('.slider-nav a');
 
 /* Satisfying Scrolling */
 subheaderLink.forEach(navLink => {
@@ -115,8 +117,42 @@ export function cardMovement() {
       }, 300);
     });
   });
+};
+
+function chageDot(entry) {
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = dot.getAttribute('href');
+      const targetSlide = document.querySelector(targetId);
+
+      targetSlide.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start'
+      });
+    });
+  });
+
+  const selected = document.querySelector('.slider-nav .active');
+
+  selected.classList.remove('active');
+
+  const id = entry.target.id;
+  const selectedDot = document.querySelector(`.slider-nav a[href="#${id}"]`)
+
+  selectedDot.classList.add('active');
 }
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      chageDot(entry);
+    }
+  });
+}, { threshold: 0.6 });
+
+slides.forEach(slide => observer.observe(slide));
 
 /* Get Started */
 getStarted.addEventListener('click', () => {
