@@ -1,7 +1,7 @@
 import { cardMovement } from "./general.js";
 
 const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
-const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench", "Dagger"]
+export const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench", "Dagger"]
 const CLUE_ROOMS = ["Library", "Hall", "Kitchen", "Study", "Lounge", "Conservatory", "Billiard Room", "Ballroom", "Dining Room"]
 
 const CARD_LIBRARY = [CLUE_CHARACTERS, CLUE_WEAPONS, CLUE_ROOMS]
@@ -13,7 +13,7 @@ const answerSection = document.querySelector('.answer-section');
 const submitButton = document.querySelector('.submit-button');
 const turnUpOpacity = document.querySelector('.turn-up-opacity');
 
-const murdering = {
+export const murdering = {
     character: CLUE_CHARACTERS[Math.floor(Math.random() * CLUE_CHARACTERS.length)],
     weapon: CLUE_WEAPONS[Math.floor(Math.random() * CLUE_WEAPONS.length)],
     rooms: CLUE_ROOMS[Math.floor(Math.random() * CLUE_ROOMS.length)]
@@ -124,8 +124,15 @@ const innerSections = document.querySelectorAll(".inner-section");
 let shuffledClueRooms = CLUE_ROOMS.sort(() => Math.random() - 0.5);
 shuffledClueRooms = shuffledClueRooms.filter(item => item !== murdering.rooms);
 
+function binaryToImageURL(binary) {
+  const blob = new Blob([binary], { type: 'image/png' });
+  return URL.createObjectURL(blob);
+}
+
 innerSections.forEach((section, i) => {
     const imgHTML = `<img src="./images/cards/${shuffledClueRooms[i]}.png" alt="image of a ${CLUE_ROOMS[i]}" class="rooms-to-find">`;
+
+    imgHTML.src = binaryToImageURL(myBinaryData);
     
     section.insertAdjacentHTML('beforeend', imgHTML);
 });

@@ -156,13 +156,14 @@ slides.forEach(slide => observer.observe(slide));
 
 /* Get Started */
 getStarted.addEventListener('click', () => {
+  goTopDown();
   main.classList.remove('pre-start');
   preHero.classList.add('started');
 });
 
+
 main.classList.remove('pre-start');
 preHero.classList.add('started');
-
 /* const revealBtn = document.querySelector('.reveal-button');
 
 revealBtn.addEventListener('click', () => {

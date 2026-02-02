@@ -1,3 +1,4 @@
+import { CLUE_WEAPONS, murdering } from "./clue.js";
 import { teamInfo } from "./data/bio.js";
 
 const rosterSection = document.querySelector('.roster')
@@ -38,6 +39,9 @@ function randomInRoom(room) {
   return { left, top };
 }
 
+let shuffledClueWeapons = CLUE_WEAPONS.sort(() => Math.random() - 0.5);
+shuffledClueWeapons = shuffledClueWeapons.filter(item => item !== murdering.weapon);
+
 teamInfo.forEach(person => {
   const room = rooms[person.room];
   const pos = randomInRoom(room);
@@ -55,7 +59,7 @@ teamInfo.forEach(person => {
     Last Words: ${person.finalWords}
     </span>
     <div class="dot-img">
-      <img src="./images/bio/${person.name}.Dagger.jpeg" alt="${person.name}">
+      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.png" alt="${person.name}">
     </div>`
   
   if (person.team.includes('Captain')) {
