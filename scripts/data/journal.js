@@ -17,9 +17,9 @@ export const journals = {
     []
   ],
   "Kiosk": [
-    ["November", "<p>Throughout November our primary goal was to have the walls of our kiosk setup. We put up the frame, walls and metal bars and focused on the primer for our kiosk and getting it ready for painting, an incredibly important, but long and messy task. </p><p> We finished out the month by measuring all the dimensions of our kiosk and buying decorations like candlesticks and dressers to fit the dimensions.</p>", ""],
-    ["December", "<p>Throughout this month we focused on making the floor for our kiosk, and attaching them to our kiosk with L brackets. We started making a beautiful handpainted painting, and a grand sign that will grab the attention of all.</p><p> December was a productive month, and putting the finishing touches on our fireplace made us happy with the headway we made</p>", ""],
-    ["January", "<p>With the deadline drawing closer, our productivity in the kiosk shot up. We put many of the big elements like dressers, book shelves, coat hangers and our chandelier in the kiosk. We put touches on all sorts of elements, from our painting, to our sign to even a murder board we burned with fire for extra effect.</p> <p>The kiosk really started to come together this month.</p>", ""],
+    ["November", "<p>Throughout November our primary goal was to have the walls of our kiosk setup. We put up the frame, walls and metal bars and focused on the primer for our kiosk and getting it ready for painting, an incredibly important, but long and messy task. </p><p> We finished out the month by measuring all the dimensions of our kiosk and buying decorations like candlesticks and dressers to fit the dimensions.</p>", "k.1.nov.jpg"],
+    ["December", "<p>Throughout this month we focused on making the floor for our kiosk, and attaching them to our kiosk with L brackets. We started making a beautiful handpainted painting, and a grand sign that will grab the attention of all.</p><p> December was a productive month, and putting the finishing touches on our fireplace made us happy with the headway we made</p>", "k.1.dec.jpeg"],
+    ["January", "<p>With the deadline drawing closer, our productivity in the kiosk shot up. We put many of the big elements like dressers, book shelves, coat hangers and our chandelier in the kiosk. We put touches on all sorts of elements, from our painting, to our sign to even a murder board we burned with fire for extra effect.</p> <p>The kiosk really started to come together this month.</p>", "k.1.jan.jpeg"],
     []
   ],
   "Website": [

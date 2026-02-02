@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWA Clue</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="menu-header">
+        <div class="off-screen-menu">
+            <a href="#hero"><img class="mobile-logo" src="./images/logo.png" alt="logo RWA"></a>
+            <a href="#roster">Équipe</a>
+            <a href="#rules">Règles</a>
+            <a href="#journal">Journal</a>
+            <a href="#tutorial">Tutoriel</a>
+            <a href="#film">Film</a>
+            <a href="#answer">Résultat</a>
+            <a href="#copyright">Copyright</a>
+        </div>
+        <div class="menu"><span></span><span></span><span></span></div>
+    </div>
+
+    <nav class="left-nav">
+        <a href="#hero"><img class="logo" src="./images/logo.png" alt="logo RWA"></a>
+        <a href="#roster">Équipe</a>
+        <a href="#rules">Règles</a>
+        <a href="#journal">Journal</a>
+        <a href="#tutorial">Tutoriel</a>
+        <a href="#answer">Résultat</a>
+        <a href="#copyright">Copyright</a>
+    </nav>
+
+    <nav class="right-nav">
+        <a href="/index.html">EN</a>
+    </nav>
+</header>
+
+<div id="cursor"></div>
+
+<section class="pre-hero" id="pre-hero">
+    <h1>Robotique RWA : Édition Clue</h1>
+    <a>Commencer</a>
+</section>
+
+<main class="pre-start">
+
+<section class="hero" id="hero">
+    <h1>Robotique RWA : Édition Clue</h1>
+    <a href="#welcome">Section suivante</a>
+</section>
+
+<section class="welcome" id="welcome">
+    <h2>Bienvenue sur notre site</h2>
+    <section class="inner-section">
+        <p>Vous devrez faire appel à votre esprit de détective et suivre les indices jusqu’à la fin pour attraper le meurtrier. Découvrez notre thème mystérieux, notre école et tout le travail qui a permis de donner vie à l’équipe de robotique cette année. Réussirez-vous à résoudre l’enquête ?</p>
+    </section>
+</section>
+
+<section id="school" class="school">
+    <h2>Notre école</h2>
+    <section class="inner-school">
+        <section class="inner-section">
+            <p>Située à Montréal-Ouest, Royal West Academy offre plus de 20 cours différents, allant des beaux-arts à la biologie. On y retrouve aussi plus de 100 activités parascolaires et de nombreux voyages scolaires. Chaque élève peut vivre une expérience unique adaptée à ses intérêts.</p>
+            <img src="./images/rwa-logo.png" alt="logo rwa">
+        </section>
+        <iframe class="maps-figure" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.1127607943326!2d-73.64582944442883!3d45.45048670234028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172a328fdf07%3A0x2e514800dddc679e!2sRoyal%20West%20Academy!5e0!3m2!1sfr!2sca!4v1762204939619!5m2!1sfr!2sca"></iframe>
+    </section>
+</section>
+
+<section id="about-clue" class="about-clue">
+    <h2>À propos de Clue</h2>
+    <section class="inner-section">
+        <p>Clue est un célèbre jeu de mystère où les joueurs doivent découvrir le meurtrier, l’arme et la pièce du crime.</p>
+    </section>
+</section>
+
+<section id="clue-edition">
+    <h2>Édition Clue RWA</h2>
+    <section class="inner-section">
+        <p>Notre site contient un jeu de Clue caché ! Explorez chaque section pour trouver des indices. Une arme manque… et c’est probablement celle du crime.</p>
+    </section>
+</section>
+
+<!-- RULES -->
+<section id="rules"><section class="inner-section"><h2>Règles de Mø-Duel</h2><p>Mø-Duel est le nouveau jeu de robotique CRC...</p></section></section>
+
+<!-- JOURNAL (CRITICAL FOR JS) -->
+<section id="journal">
+    <h2>Journal de l’équipe</h2>
+    <p>Découvrez le parcours de chaque équipe depuis novembre…</p>
+    <div class="journal-selector">
+        <button href="index.html" class="journal-link selected">Robot</button>
+        <button href="simulation.html" class="journal-link">Site Web</button>
+        <button href="customize.html" class="journal-link">Film</button>
+        <button href="about.html" class="journal-link">Kiosque</button>
+    </div>
+    <section class="book"></section>
+</section>
+
+<section id="tutorial"><h2>Tutoriel</h2><section class="inner-section">Tutoriel du jeu ici.</section></section>
+
+<section id="film"><h2>Film</h2><section class="inner-section">Informations sur le film.</section></section>
+
+<section id="answer">
+    <h2>Qui est le meurtrier ?</h2>
+    <section class="inner-section">
+        <p>Une pièce manque dans le site. C’est la pièce du crime.</p>
+    </section>
+    <section class="answer-section"><button class="submit-button">Soumettre</button></section>
+</section>
+
+<section id="copyright"><h2>Copyright</h2></section>
+<section id="ai"><h2>Utilisation de l’IA</h2></section>
+
+</main>
+
+<section class="checklist-section">
+    <section class="checklist hidden"></section>
+    <div class="checklist-button">
+        <img src="./images/notes.png" alt="notes">
+    </div>
+</section>
+
+<canvas id="bg"></canvas>
+
+<script type="module" src="./scripts/general.js"></script>
+<script type="module" src="./scripts/three.js"></script>
+<script type="module" src="./scripts/clue.js"></script>
+<script type="module" src="./scripts/journal.js"></script>
+<script type="module" src="./scripts/roster.js"></script>
+
+<!-- COPYRIGHT SECTION -->
+<section id="copyright">
+    <h2>Copyright</h2>
+    <section class="inner-copyright">
+        <p>
+            La licence Clue™®, les personnages, logiciels, livrets de règles, propriétés intellectuelles et œuvres artistiques, ainsi que tous les autres éléments associés — incluant, sans s’y limiter, toute production commerciale ou non commerciale de Clue® — sont protégés par les lois américaines sur le droit d’auteur ©.
+            <br><br>
+            En vertu du « Titre 17 du Code des États-Unis d’Amérique sur le droit d’auteur et la protection contre la contrefaçon ».
+            <br><br>
+            (Droit d’auteur © 1949, renouvelé en 2020)
+            <br><br>
+            Tous les éléments de production sont la propriété exclusive de Hasbro, Parker Brothers et Hasbro Enterprises. Marques déposées ™ et droit d’auteur © 2020 Hasbro Enterprises, L.P. Tous droits réservés.
+        </p>
+    </section>
+</section>
+
+<!-- AI USAGE SECTION -->
+<section id="ai">
+    <h2>Utilisation de l’IA</h2>
+    <section class="inner-copyright">
+        <p>
+            Notre site contient une utilisation minimale de l’intelligence artificielle, principalement pour la vérification de bogues et d’erreurs. Pour certains styles CSS nécessitant des définitions ou des dimensions précises, nous avons utilisé l’IA afin d’obtenir de l’information et de l’aide pour le formatage. De plus, pour la section des règles du jeu, l’IA a servi à fournir une structure générale avant que nous remplacions la majorité du contenu manuellement.
+        </p>
+    </section>
+</section>
+
+
+</body>
+</html>

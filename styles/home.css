@@ -12,7 +12,7 @@ main > section {
     scroll-snap-stop: always;
 }
 
-.inner-section {
+.inner-section, .inner-copyright {
     border-radius: 40px;
     font-size: 20px;
     padding: 20px;
@@ -25,6 +25,10 @@ main > section {
     position: relative;
     overflow: hidden;
     min-height: 200px;
+}
+
+.copyright {
+    margin-top: 80px;
 }
 
 .rooms-to-find {

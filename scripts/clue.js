@@ -124,15 +124,8 @@ const innerSections = document.querySelectorAll(".inner-section");
 let shuffledClueRooms = CLUE_ROOMS.sort(() => Math.random() - 0.5);
 shuffledClueRooms = shuffledClueRooms.filter(item => item !== murdering.rooms);
 
-function binaryToImageURL(binary) {
-  const blob = new Blob([binary], { type: 'image/png' });
-  return URL.createObjectURL(blob);
-}
-
 innerSections.forEach((section, i) => {
     const imgHTML = `<img src="./images/cards/${shuffledClueRooms[i]}.png" alt="image of a ${CLUE_ROOMS[i]}" class="rooms-to-find">`;
-
-    imgHTML.src = binaryToImageURL(myBinaryData);
     
     section.insertAdjacentHTML('beforeend', imgHTML);
 });
