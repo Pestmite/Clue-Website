@@ -24,7 +24,7 @@
     <header>
         <div class="menu-header">
             <div class="off-screen-menu">
-                <a href="#hero"><img class="mobile-logo" src="images/logo.png" alt="RWA logo"></a>
+                <a href="#hero"><img class="mobile-logo" src="./images/logo.png" alt="RWA logo"></a>
                 <a href="#roster">Roster</a>
                 <a href="#rules">Rules</a>
                 <a href="#journal">Journal</a>
@@ -41,7 +41,7 @@
         </div>
 
         <nav class="left-nav">  
-            <a href="#hero"><img class="logo" src="images/logo.png" alt="RWA logo"></a>
+            <a href="#hero"><img class="logo" src="./images/logo.png" alt="RWA logo"></a>
             <a href="#roster">Roster</a>
             <a href="#rules">Rules</a>
             <a href="#journal">Journal</a>
@@ -79,7 +79,7 @@
             <section class="inner-school">
                 <section class="inner-section">
                     <p>Like the game of Clue, Royal West Academy has a wonderful new story for everyone. The school, located in Montreal West, has over 20 different classes available, with topics ranging all the way from Fine Arts to Biology. In addition, there are over 100 extracurricular activities to discover, and fun school trips to go on! With all of these opportunities to learn, discover, and grow, every student gets the opportunity to have a unique experience tailored to their interests and needs.</p>     
-                    <img src="images/rwa-logo.png" alt="rwa logo">
+                    <img src="./images/rwa-logo.png" alt="rwa logo">
                 </section>
                 <iframe class="maps-figure" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.1127607943326!2d-73.64582944442883!3d45.45048670234028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9172a328fdf07%3A0x2e514800dddc679e!2sRoyal%20West%20Academy!5e0!3m2!1sen!2sca!4v1762204939619!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
             </section>     
@@ -123,9 +123,9 @@
             </section>
         </section>
 
-        <section id="roster">
+        <section id="roster" class="roster">
             <h2>Our Team</h2>
-            <img src="./images/bio/Mia Kaneko-Crump.Wrench.jpeg" alt="">
+            <img src="./images/clue-house.png" alt="clue house" class="clue-house">
         </section>
 
         <section id="rules">
@@ -144,7 +144,7 @@
                             <li>Core</li>
                             <li>Turbine</li>
                         </ul>
-                        <img src="images/turbine.jpeg" alt="Picture of turbine">
+                        <img src="./images/turbine.jpeg" alt="Picture of turbine">
                     </section>
                     <section>
                         Each piece comes in <strong>blue, yellow, or red</strong>:
@@ -233,7 +233,7 @@
         <section id="answer">
             <h2>Whodunnit?</h2>
             <section class="inner-section">
-                <p>It's the moment we've all been waiting for. Who killed our mentor? You've found the murderer, you have the weapon, hold on… what room did he get murdered in? If you go back to each section of the website (about us, roster, journal, etc.), you will notice each one has a theme surrounding a room, but one room is missing. The missing room will give you the missing piece of the puzzle. Once you're confident enough with your guess, select one of each card and submit your guess for the reveal.</p>
+                <p>It's the moment we've all been waiting for. Who killed our mentor? You've found the murderer, you have the weapon, hold on… what room did he get murdered in? If you go back to each section of the website (about us, roster, journal, etc.), you will notice each one has a theme surrounding a room, but one room is missing. The missing room will give you the missing piece of the puzzle. Once you're confident enough with your guess, select one of each card and submit your guess for the reveal. It may be easier to find the room if you <span class="turn-up-opacity">toggle the opacity</span>. If you don't know which room is which, remember to check the picture options for the room cards further down.</p>
             </section class="video">
             <section class="answer-section"><button class="submit-button">Submit Guess</button></section>
         </section>
@@ -244,7 +244,7 @@
         <div class="checklist-button">
             <img src="./images/notes.png" alt="take notes">
         </div>
-        <button class="reveal-button">Reveal</button>
+        <!-- <button class="reveal-button">Reveal</button> -->
     </section>
 
     <canvas id="bg"></canvas>
@@ -253,5 +253,6 @@
     <script type="module" src="./scripts/three.js"></script>
     <script type="module" src="./scripts/clue.js"></script>
     <script type="module" src="./scripts/journal.js"></script>
+    <script type="module" src="./scripts/roster.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@ const checklist = document.querySelector('.checklist');
 const checklistButton = document.querySelector('.checklist-button');
 const answerSection = document.querySelector('.answer-section');
 const submitButton = document.querySelector('.submit-button');
+const turnUpOpacity = document.querySelector('.turn-up-opacity');
 
 const murdering = {
     character: CLUE_CHARACTERS[Math.floor(Math.random() * CLUE_CHARACTERS.length)],
@@ -120,6 +121,20 @@ submitButton.addEventListener('click', () => {
 
 const innerSections = document.querySelectorAll(".inner-section");
 
+let shuffledClueRooms = CLUE_ROOMS.sort(() => Math.random() - 0.5);
+shuffledClueRooms = shuffledClueRooms.filter(item => item !== murdering.rooms);
+
 innerSections.forEach((section, i) => {
-    section.innerHTML += `<img src="./images/cards/${CLUE_ROOMS[i]}.png" alt="image of a ${CLUE_ROOMS[i]}" class="rooms-to-find">`
+    const imgHTML = `<img src="./images/cards/${shuffledClueRooms[i]}.png" alt="image of a ${CLUE_ROOMS[i]}" class="rooms-to-find">`;
+    
+    section.insertAdjacentHTML('beforeend', imgHTML);
+});
+
+const roomsToFind = document.querySelectorAll('.rooms-to-find');
+
+turnUpOpacity.addEventListener('click', () => {
+  console.log(roomsToFind)
+  roomsToFind.forEach(room => {
+    room.classList.toggle('high-opacity');
+  });
 });

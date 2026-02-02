@@ -28,7 +28,7 @@ const loader = new GLTFLoader();
 loader.load('/models/rwa.glb', gltf => {
   RWAModel = gltf.scene;
 
-  RWAModel.scale.set(0.3, 0.3, 0.3);
+  RWAModel.scale.set(3, 3, 3);
   RWAModel.position.set(0, 0, 0);
 
   scene.add(RWAModel);

@@ -23,7 +23,7 @@ subheaderLink.forEach(navLink => {
 });
 
 /* Notebook disappearing */
-let startY = 0;
+/* let startY = 0;
 let HIDEMIN = 80;
 
 window.addEventListener('scroll', () => {
@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
   }
 
   startY = currentY;
-});
+}); */
 
 /* Mobile Menu */
 menu.addEventListener('click', () => {
@@ -163,7 +163,7 @@ getStarted.addEventListener('click', () => {
 main.classList.remove('pre-start');
 preHero.classList.add('started');
 
-const revealBtn = document.querySelector('.reveal-button');
+/* const revealBtn = document.querySelector('.reveal-button');
 
 revealBtn.addEventListener('click', () => {
   const allCards = document.querySelectorAll('.card-inner');
@@ -174,3 +174,4 @@ revealBtn.addEventListener('click', () => {
     }, i * 170);
   });
 });
+ */

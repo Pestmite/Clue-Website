@@ -1,0 +1,82 @@
+.roster {
+  position: relative;
+}
+
+.clue-house {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle.captain {
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(223, 170, 38));
+}
+
+.circle:hover {
+  width: 200px;
+  height: 265px;
+  padding: 20px;
+  transform: translateX(-50%) translateY(-100px);
+  border-radius: 15px;
+  background: rgb(181, 34, 181);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.circle-text {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.dot-img {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.dot-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+}
+
+.dot-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.circle:hover .dot-img,
+.circle:hover .circle-text {
+  opacity: 1;
+}

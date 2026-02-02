@@ -23,11 +23,10 @@ main > section {
     transition: background-color .5s;
     text-align: justify;
     position: relative;
+    overflow: hidden;
+    min-height: 200px;
 }
-.reveal-thingy{
-    background-color: red;
-    
-}
+
 .rooms-to-find {
     width: 100% !important;
     max-width: none !important;
@@ -39,7 +38,9 @@ main > section {
     object-fit: cover;
     opacity: 0.18;
     position: absolute;
+    pointer-events: none;
     z-index: -1;
+    transition: opacity 0.3s;
 }
 
 .inner-school {
@@ -113,6 +114,7 @@ main > section {
 .about-clue .inner-section {
     display: flex;
     height: auto;
+    align-items: center;
 }
 
 .carousel-container {
@@ -201,6 +203,7 @@ main > section {
 @media (max-width: 920px) {
     .about-clue .inner-section {
         flex-direction: column;
+        justify-content: center;
     }
 
     .about-clue p {
@@ -213,10 +216,10 @@ main > section {
     }
 
     .carousel-container {
-        max-width: none;
+        max-width: 100%;
     }
     
-    .slider img {
+    .slider img, .slider-image-container {
         max-width: none;
         width: 100%;
     }
@@ -533,23 +536,24 @@ img.cover-image {
     box-shadow: 0 0 20px rgb(181, 35, 181);
 }
 
-#reveal-thingy{
-    margin:20px;
-    padding: 15px 30px;
+.reveal-button {
+    margin: 20px;
+    padding: 12px 20px;
     background: rgb(220, 22, 22);
     color: black;
     font-weight: bold;
     border: none;
     border-radius: 8px;
+    
     font-size: 18px;
     cursor: pointer;
     transition: 0.25s;
-  }
+}
   
-  #reveal-thingy:hover{
-    padding: 35px 40px;
-  
-  }
+.reveal-button:hover {
+    padding: 16px 24px;
+}
+
 .selector-card:hover ~ .selector-card {
     transform: translateX(48px);
 }
@@ -579,4 +583,10 @@ img.cover-image {
 .can-submit:hover {
     background-color: rgb(181, 35, 181);
     color: white
+}
+
+.turn-up-opacity {
+    text-decoration: underline;
+    color: rgb(167, 167, 244);
+    cursor: pointer;
 }

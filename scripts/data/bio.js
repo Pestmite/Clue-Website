@@ -1,4 +1,4 @@
-const teamInfo = [
+export const teamInfo = [
   {
       name: "Zack Crosbie",
       weapon: "Revolver",
@@ -15,7 +15,7 @@ const teamInfo = [
   }, {
       name: "Loïc Bergthorson",
       weapon: "Lead pipe",
-      room: "Billiard room",
+      room: "Billiard Room",
       finalWords: "Six…*cough cough*… seven *dies*",
       team: "Kiosk team"
   }, {
@@ -57,13 +57,13 @@ const teamInfo = [
   }, {
       name: "Sidney Tran",
       weapon: "Revolver",
-      room: "The entrence",
+      room: "Hall",
       finalWords: "For whom I trusted is whom who shot me.",
       team: "Kiosk team"
   }, {
       name: "Matthew Beauchamp",
       weapon: "Revolver",
-      room: "Study room",
+      room: "Study",
       finalWords: "To be sure of success, we must first believe that we can.",
       team: "Kiosk team"
   }, {
@@ -77,7 +77,7 @@ const teamInfo = [
       weapon: "Wrench",
       room: "Conservatory",
       finalWords: "Tis but a scratch!",
-      team: "Film team"
+      team: "Captain of the film team"
   }, {
       name: "Chloe Romero Demi",
       weapon: "Rope",
@@ -107,7 +107,7 @@ const teamInfo = [
       weapon: "Lead Pipe",
       room: "Lounge",
       finalWords: "Yo never doubt me again",
-      team: "Robot team"
+      team: "Robot team, Coding team"
   }, {
       name: "Thomas Ziller",
       weapon: "Rope",
@@ -132,13 +132,13 @@ const teamInfo = [
       weapon: "Dagger",
       room: "Library",
       finalWords: "I have one lung",
-      team: "Robot team"
+      team: "Captain of robot team"
   }, {
       name: "Leonidas Hanna",
       weapon: "Dagger",
       room: "Library",
       finalWords: "At least I'll have more free time when im dead",
-      team: "Kiosk team"
+      team: "Robot team, coding team"
   }, {
       name: "Mr. Macpherson",
       weapon: "Wrench",
@@ -175,7 +175,7 @@ const teamInfo = [
       weapon: "Candlestick",
       room: "Conservatory",
       finalWords: "Kathie dropped me as a baby...",
-      team: "Kiosk team"
+      team: "Captain of the kiosk team"
   }, {
       name: "Lucas Mandel",
       weapon: "Revolver",
@@ -215,7 +215,7 @@ const teamInfo = [
   }, {
       name: "William Benzacar",
       weapon: "Candlestick",
-      room: "Billiard room",
+      room: "Billiard Room",
       finalWords: "The lights... they went out too fast…",
       team: "Website team"
   }, {
@@ -223,7 +223,7 @@ const teamInfo = [
       weapon: "Candlestick",
       room: "Dining Room",
       finalWords: "Don't kill people",
-      team: "Robot team"
+      team: "Robot team, coding team"
   }, {
       name: "Sarah Zhang",
       weapon: "Lead pipe",
@@ -235,20 +235,19 @@ const teamInfo = [
       weapon: "Wrench",
       room: "Study",
       finalWords: "Yes, I am the real Aristotle",
-      team: "Robot team"
+      team: "Captain of the robot team"
   }, {
-
       name: "Zachary Levy",
       weapon: "Wrench",
       room: "Billiard Room",
       finalWords: "Nate did it...he's the murderer...tho ill always love you Papa😵",
-      team: "Robot team"
+      team: "Robot team, Website team"
   }, {
       name: "Sahej Mand",
       weapon: "Revolver",
       room: "Conservatory",
       finalWords: "if i were to reincarnate as a piece of code, i hope i'd come back as a for loop",
-      team: "Coding team"
+      team: "Captain of the coding team"
   }, {
       name: "Hayley Lapensee",
       weapon: "Candlestick",
@@ -258,13 +257,13 @@ const teamInfo = [
   }, {
       name: "Sarah Bilodeau-Cheong",
       weapon: "Lead Pipe",
-      room: "Library Room",
+      room: "Library",
       finalWords: "Eolande is the killer!",
       team: "Robot team"
   }, {
       name: "William Rivet",
       weapon: "Revolver",
-      room: "Study Room",
+      room: "Study",
       finalWords: "Good luck finding my secrets",
       team: "Kiosk team"
   }, {
@@ -278,12 +277,12 @@ const teamInfo = [
       weapon: "Dagmar",
       room:"Kitchen",
       finalWords: "Red Bull + six 3 am nights gives u website",
-      team: "Website team"
+      team: "Captain of the website team"
   }, {
       name: "Charlie Chaki",
       weapon: "Dagger",
-      room: "Billiard room",
+      room: "Billiard Room",
       finalWords: "What does this button do?",
-      team: "Website team"
+      team: "Captain of the website team, robot team, coding team"
   }
 ]
