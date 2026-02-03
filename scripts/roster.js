@@ -44,6 +44,7 @@ shuffledClueWeapons = shuffledClueWeapons.filter(item => item !== murdering.weap
 
 teamInfo.forEach(person => {
   const room = rooms[person.room];
+  console.log(room, person.name)
   const pos = randomInRoom(room);
 
   const dot = document.createElement('div');

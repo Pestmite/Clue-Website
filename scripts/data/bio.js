@@ -117,7 +117,7 @@ export const teamInfo = [
   },{ 
     name: "River something who cares i didnt fill out this bio",
     weapon: "Lead Pipe",
-    room: "Dinning Room",
+    room: "Dining Room",
     finalWords: "Vro I didnt fill this bio out save me it's 3 am and the site is due tmr -website team",
     team: "Coding team"
 },{ 
@@ -147,9 +147,9 @@ export const teamInfo = [
   }, {
     name: "Allen Sun",
     weapon: "Wrench",
-    room: "Dinning Room",
+    room: "Dining Room",
     finalWords: "Tsk Tsk Tsk i didnt submit my quote on time #Imagine#Peak#FreeCRCLwk",
-    team: "Robot"
+    team: "Robot Team"
   }, {
       name: "Mr. Macpherson",
       weapon: "Wrench",
