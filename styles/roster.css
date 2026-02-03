@@ -2,6 +2,29 @@
   position: relative;
 }
 
+.rectangle-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  place-items: center;
+}
+
+.rectangle {
+  display: none;
+  width: 200px;
+  height: 265px;
+  padding: 20px;
+  align-items: end;
+  justify-content: end;
+  border-radius: 15px;
+  background: rgb(181, 34, 181);
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
+  z-index: 100;
+  max-width: 750px;
+  
+  
+}
+
 .clue-house {
   width: 100%;
   max-width: 800px;
@@ -82,4 +105,24 @@
 .circle:hover .dot-img,
 .circle:hover .circle-text {
   opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .circle {
+    display: none;
+  }
+
+  .clue-house {
+    display: none;
+  }
+
+  .rectangle {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .rectangle-section {
+    grid-template-columns: 1fr;
+  }
 }

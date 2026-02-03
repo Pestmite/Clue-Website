@@ -1,6 +1,6 @@
 import { cardMovement } from "./general.js";
 
-const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
+export const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
 export const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench", "Dagger"]
 const CLUE_ROOMS = ["Library", "Hall", "Kitchen", "Study", "Lounge", "Conservatory", "Billiard Room", "Ballroom", "Dining Room"]
 
@@ -10,7 +10,8 @@ const CLUE_ROOMS_FR = ["Bibliothèque", "Hall", "Cuisine", "Bureau", "Salon", "V
 
 const CARD_LIBRARY = [CLUE_CHARACTERS, CLUE_WEAPONS, CLUE_ROOMS]
 const CARD_LIBRARY_FR = [CLUE_CHARACTERS_FR, CLUE_WEAPONS_FR, CLUE_ROOMS_FR]
-const CARD_TITLES = ["Sélecteur de personnage", "Sélecteur d'arme", "Sélecteur de pièce"]
+const CARD_TITLES = ["Character Selector", "Weapon Selector", "Room Selector"]
+const CARD_TITLES_FR = ["Sélecteur de personnage", "Sélecteur d'arme", "Sélecteur de pièce"]
 
 const checklist = document.querySelector('.checklist');
 const checklistButton = document.querySelector('.checklist-button');
@@ -71,7 +72,7 @@ function generateReveal() {
             <div class="card-tilt">
                 <div class="card">
                     <div class="card-front">
-                        <img src="./images/logo.png" alt="clue-logo">
+                        <img src="./images/cards/backs/${CARD_TITLES[i]}.png" alt="clue-logo" class="card-${CARD_TITLES[i].slice(0, 3)}">
                     </div>
 
                     <div class="card-back">
@@ -87,7 +88,8 @@ function generateReveal() {
 }
 
 for (let i = 0; i < 3; i++) {
-    answerSection.insertAdjacentHTML('beforeend', `<h2>${CARD_TITLES[i]} (Sélectionné: <span class="guess-${i}">Aucun</span>)</h2><section class="card-list list-${i}"></section>`);
+    answerSection.insertAdjacentHTML('beforeend', `<h2>${CARD_TITLES_FR[i]} (Sélectionné: <span class="guess-${i}">Aucun</span>)</h2><section class="card-list list-${i}"></section>`);
+
     const cardList = document.querySelector(`.list-${i}`);
     const guess = document.querySelector(`.guess-${i}`);
     

@@ -1,8 +1,10 @@
 import { CLUE_WEAPONS, murdering } from "./clue-fr.js";
-import { teamInfo } from "./data/bio.js";
+import { CLUE_CHARACTERS } from "./clue.js";
+import { teamInfo, teamInfoFr } from "./data/bio.js";
 
 const rosterSection = document.querySelector('.roster')
 const house = document.querySelector('.clue-house');
+const rectangleSection = document.querySelector('.rectangle-section');
 
 const rooms = {
   "Kitchen": { x: 200,  y: 430,  w: 180, h: 90 },
@@ -42,6 +44,12 @@ function randomInRoom(room) {
 let shuffledClueWeapons = CLUE_WEAPONS.sort(() => Math.random() - 0.5);
 shuffledClueWeapons = shuffledClueWeapons.filter(item => item !== murdering.weapon);
 
+let shuffledClueCharacters = CLUE_CHARACTERS.sort(() => Math.random() - 0.5);
+shuffledClueCharacters = shuffledClueCharacters.filter(item => item !== murdering.character);
+shuffledClueCharacters = shuffledClueCharacters.concat(shuffledClueCharacters);
+
+let captainIndex = 0;
+
 teamInfo.forEach(person => {
   const room = rooms[person.room];
   const pos = randomInRoom(room);
@@ -52,19 +60,51 @@ teamInfo.forEach(person => {
   dot.style.top = pos.top + 'px';
 
   dot.innerHTML += `<span class="circle-text">
-    Victime: ${person.name}<br>
-    Rôle : ${person.team}<br>
-    Arme : ${person.weapon}<br>
-    Pièce : ${person.room}<br>
-    Dernières paroles : ${person.finalWords}
+    Victim: ${person.name}<br>
+    Role: ${person.team}<br>
+    Weapon: ${person.weapon}<br>
+    Room: ${person.room}<br>
+    Last Words: ${person.finalWords}<br>
+    ${person.team.includes('Captain') ? `SECRET CHARACTER: ${shuffledClueCharacters[captainIndex]} `: ''}
     </span>
     <div class="dot-img">
-      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.png" alt="${person.name}">
+      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.jpeg" alt="${person.name}">
     </div>`
   
   if (person.team.includes('Captain')) {
-    dot.classList.add('captain')
+    dot.classList.add('captain');
+    captainIndex++;
   }
   
   rosterSection.appendChild(dot);
+});
+
+captainIndex = 0
+teamInfo.forEach((person, i) => {
+  const room = rooms[person.room];
+  const pos = randomInRoom(room);
+
+  const dot = document.createElement('div');
+  dot.className = 'rectangle';
+  dot.style.left = pos.left + 'px';
+  dot.style.top = pos.top + 'px';
+
+  dot.innerHTML += `<span class="rectangle-text">
+    Victime : ${person.name}<br>
+    Rôle : ${person.team}<br>
+    Arme : ${person.weapon}<br>
+    Pièce : ${person.room}<br>
+    Dernières paroles : ${person.finalWords}<br>
+    ${person.team.includes("Captain") ? `SECRET CHARACTER: ${shuffledClueCharacters[captainIndex]} `: ""}
+    </span>
+    <div class="dot-img">
+      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.jpeg" alt="${person.name}">
+    </div>`
+  
+  if (person.team.includes('Captain')) {
+    dot.classList.add('captain');
+    captainIndex++;
+  }
+  
+  rectangleSection.appendChild(dot);
 });

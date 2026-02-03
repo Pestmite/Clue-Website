@@ -1,6 +1,6 @@
 import { cardMovement } from "./general.js";
 
-const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
+export const CLUE_CHARACTERS = ["Proffessor Plum", "Colonel Mustard", "Mr. Green", "Mrs. White", "Ms. Scarlett", "Mrs. Peacock"]
 export const CLUE_WEAPONS = ["Revolver", "Lead Pipe", "Rope", "Candlestick", "Wrench", "Dagger"]
 const CLUE_ROOMS = ["Library", "Hall", "Kitchen", "Study", "Lounge", "Conservatory", "Billiard Room", "Ballroom", "Dining Room"]
 
@@ -53,12 +53,12 @@ checklistItem.forEach(item => {
 function generateReveal() {
     const cardContainer = document.querySelector('.card-section');
     
-    Object.values(murdering).forEach(card => {
+    Object.values(murdering).forEach((card, i) => {
         cardContainer.innerHTML += `<div class="card-container">
             <div class="card-tilt">
                 <div class="card">
                     <div class="card-front">
-                        <img src="./images/logo.png" alt="clue-logo">
+                        <img src="./images/cards/backs/${CARD_TITLES[i]}.png" alt="clue-logo" class="card-${CARD_TITLES[i].slice(0, 3)}">
                     </div>
 
                     <div class="card-back">
