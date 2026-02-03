@@ -32,6 +32,10 @@ nav, .menu {
   transition: background-color .5s, box-shadow .3s;
 }
 
+.nav-fr {
+  max-width: 600px;
+}
+
 .right-nav {
 	width: auto;
 	padding: 12px 24px;

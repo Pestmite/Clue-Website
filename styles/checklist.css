@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 16px;
   right: 16px;
+  width: 40px;
   display: flex;
   flex-direction: column;
   align-items: end;

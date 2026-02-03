@@ -432,6 +432,10 @@ main > section {
     margin-bottom: 32px;
 }
 
+.journal-fr {
+    width: 400px;
+}
+
 .journal-selector .selected {
     background-color: rgb(0, 0, 0);
 	box-shadow: 0 0 4px rgba(181, 35, 181, 0.712);

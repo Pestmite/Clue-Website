@@ -133,7 +133,6 @@ innerSections.forEach((section, i) => {
 const roomsToFind = document.querySelectorAll('.rooms-to-find');
 
 turnUpOpacity.addEventListener('click', () => {
-  console.log(roomsToFind)
   roomsToFind.forEach(room => {
     room.classList.toggle('high-opacity');
   });

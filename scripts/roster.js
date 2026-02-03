@@ -59,7 +59,7 @@ teamInfo.forEach(person => {
     Last Words: ${person.finalWords}
     </span>
     <div class="dot-img">
-      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.png" alt="${person.name}">
+      <img src="./images/bio/${person.name}.${shuffledClueWeapons[Math.floor(Math.random() * shuffledClueWeapons.length)]}.jpeg" alt="${person.name}">
     </div>`
   
   if (person.team.includes('Captain')) {

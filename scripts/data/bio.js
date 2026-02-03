@@ -14,7 +14,7 @@ export const teamInfo = [
       team: "Robot team",
   }, {
       name: "Loïc Bergthorson",
-      weapon: "Lead pipe",
+      weapon: "Lead Pipe",
       room: "Billiard Room",
       finalWords: "Six…*cough cough*… seven *dies*",
       team: "Kiosk team"
@@ -115,9 +115,14 @@ export const teamInfo = [
       finalWords: "What a sad book",
       team: "Website team"
   },{ 
-      
+    name: "River something who cares i didnt fill out this bio",
+    weapon: "Lead Pipe",
+    room: "Dinning Room",
+    finalWords: "Vro I didnt fill this bio out save me it's 3 am and the site is due tmr -website team",
+    team: "Coding team"
+},{ 
       name: "Sparsh Nishit Shah",
-      weapon: "Lead pipe",
+      weapon: "Lead Pipe",
       room: "Library",
       finalWords: "It's time to take one final flight into the sky...",
       team: "Coding team"
@@ -128,7 +133,7 @@ export const teamInfo = [
       finalWords: "Idk",
       team: "Robot Team"
   }, {
-      name: "Rebecca O'Neill",
+      name: "Rebecca O'NeillRebecca O'Neill",
       weapon: "Dagger",
       room: "Library",
       finalWords: "I have one lung",
@@ -139,6 +144,12 @@ export const teamInfo = [
       room: "Library",
       finalWords: "At least I'll have more free time when im dead",
       team: "Robot team, coding team"
+  }, {
+    name: "Allen Sun",
+    weapon: "Wrench",
+    room: "Dinning Room",
+    finalWords: "Tsk Tsk Tsk i didnt submit my quote on time #Imagine#Peak#FreeCRCLwk",
+    team: "Robot"
   }, {
       name: "Mr. Macpherson",
       weapon: "Wrench",
@@ -226,7 +237,7 @@ export const teamInfo = [
       team: "Robot team, coding team"
   }, {
       name: "Sarah Zhang",
-      weapon: "Lead pipe",
+      weapon: "Lead Pipe",
       room: "Library",
       finalWords: "Eolande is the killer!",
       team: "Robot team"
